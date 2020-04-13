@@ -413,8 +413,8 @@ a {
         opacity: 1;
     }
     .photo{
-        width: 150px;
-        height: 150px;
+        width: 20vw;
+        height: 20vh;
         margin: 2px;
         border: rgb(255, 255, 255) 3px solid;
         
