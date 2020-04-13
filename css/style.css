@@ -366,9 +366,16 @@ a {
         color:#292929;
         padding: 10px 16px;
         letter-spacing: .05em;
+        box-shadow: none;
+
     
     }
+    .main-nav li a:hover{
+        background-color: #97dbf1d7;
+        box-shadow: none;
 
+    }
+    
     .Meme-Editor{
     flex-direction: column;
 
@@ -426,4 +433,8 @@ a {
     
     }
 
+    .welcome{
+        font-size: 2rem;
+
+    }
 }
