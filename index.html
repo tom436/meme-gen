@@ -10,9 +10,12 @@
 </head>
 
 <body onload="onInit()">
+    <section onclick="openNav()" class="screen"></section>
+
     <header >
-        <section class="main-header flex space-between align-center ">
+        <section class="main-header flex space-between align-center container">
             <div class="logo">Meme It.</div>
+            <button class="hamburger fas fa-bars" onclick="openNav()" ></button>
             <ul class="main-nav flex clean-list center">
                 <li><a href="#" onclick="onShowGallery()">Gallery</a></li>
                 <li><a href="#" onclick="onShowMems()">Memes</a></li>

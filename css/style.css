@@ -73,6 +73,9 @@ a {
 ;
 
 }
+.hamburger{
+    visibility: hidden;
+}
 .main-nav li a{
     font-size: 1.5rem;
 
@@ -80,8 +83,8 @@ a {
     color: rgb(255, 255, 255);
 
     height: 130px;
-    width: 130px;
     display: flex;
+    margin-left: 50px;
     align-items : center;
     justify-content: center;
 }
@@ -271,8 +274,7 @@ a {
 .canvas-container{
     height: 508px;
     border: solid 4px rgb(255, 255, 255);
-    min-width: 508px;
-    max-width: 508px;
+    width: 508px;
     margin-left: .6rem;
 
 }
@@ -311,17 +313,71 @@ a {
 }
 
 @media (max-width:900px){
+
     .main-header{
         margin-bottom: 0;
+        height: 130px;
     }
+    .main-nav li a{
+        /* font-size: 1.5rem;
+    
+        display: block;
+        color: rgb(255, 255, 255);
+    
+        height: 130px;
+        width: 130px;
+        display: flex;
+        align-items : center;
+        justify-content: center; */
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 0;
+
+    }
+
+    .main-nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: transform .6s;
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+        padding: 0;
+        flex-wrap: wrap;
+        transform: translateX(100%);
+
+        flex-direction: column;
+    
+    }
+    .hamburger{
+        visibility: visible;
+        background-color: rgba(71, 51, 51, 0);
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+
+    }
+    .menu-open .main-nav {   
+        transform: translateX(0%);
+    }
+    .main-nav li a{
+        border-bottom:2px #97dbf1d7 solid;
+        color:#292929;
+        padding: 10px 16px;
+        letter-spacing: .05em;
+    
+    }
+
     .Meme-Editor{
     flex-direction: column;
+
     }
     .canvas-container{
 
         margin: 0 auto;
+        max-width: 100%;
         
-
     }
     
     .editor-actions{
@@ -342,8 +398,32 @@ a {
         width: 508px;
         height: 30rem;
         margin: 0 auto;
- 
-
+        max-width: 100%;
+    }
+    .screen{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+    
+        transition: opacity .6s;
+    
+    }
+    .menu-open .screen  {
+        visibility: visible;
+        opacity: 1;
+    }
+    .photo{
+        width: 100px;
+        margin: 10px;
+        border: rgb(255, 255, 255) 3px solid;
+        
+    
     }
 
 }
