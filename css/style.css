@@ -383,17 +383,24 @@ a {
     .canvas-container{
 
         margin: 0 auto;
-        max-width: 100%;
+        max-width:300px;
+        max-height: 300px;
+
         
     }
     
     .editor-actions{
  
-        width: 508px;
+        width: 300px;
         height: 30rem;
         margin: 0 auto;
         max-width: 100%;
     }
+    .box{
+        margin: 0;
+        font-size: 1em;
+        text-align: center;
+        }
     .screen{
         position: fixed;
         top: 0;

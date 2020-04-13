@@ -169,16 +169,27 @@ function onChangeFont(){
 
 }
 
-function onAlign(pos,offset){
+function onAlign(pos){
     
-    align(pos,offset)
+    align(pos)
     drawImg()
     dreawText()
 }
-function align(pos,offset){
+function align(pos){
     gMeme.lines.forEach(line=>{
-        line.offsetWidth=offset
-        line.align=pos;
+        if(pos==='left'){
+            line.offsetWidth=0;
+            line.align=pos;
+        }
+        else if(pos==='center'){
+            line.offsetWidth=gElcanvas.width/2;
+            line.align=pos;
+        }
+        else{
+            line.offsetWidth=gElcanvas.width-3;
+            line.align=pos;
+        }
+
     
     })
 }
