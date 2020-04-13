@@ -150,10 +150,10 @@ a {
     "stickers stickers stickers stickers stickers "
     "share share . download download"
     ;
-    
+    margin-left: .6rem;
     grid-template-columns:  repeat(5,1fr) ;
     grid-template-rows:  repeat(6,1fr) ;
-    height: 502px;
+    height: 508px;
 }
 .box{
     margin: 10px;
@@ -273,6 +273,8 @@ a {
     border: solid 4px rgb(255, 255, 255);
     min-width: 508px;
     max-width: 508px;
+    margin-left: .6rem;
+
 }
 
 /* helpers */
@@ -316,8 +318,9 @@ a {
     flex-direction: column;
     }
     .canvas-container{
-        width: inherit;
+
         margin: 0 auto;
+        
 
     }
     
@@ -339,8 +342,7 @@ a {
         width: 508px;
         height: 30rem;
         margin: 0 auto;
-        padding-right: 10px;
-        padding-left: 10px;
+ 
 
     }
 
