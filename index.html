@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+
+<body onload="onInit()">
+    <header >
+        <section class="main-header flex space-between align-center container">
+            <div class="logo">Meme It.</div>
+            <ul class="main-nav flex clean-list center">
+                <li><a href="#" onclick="onShowGallery()">Gallery</a></li>
+                <li><a href="#" onclick="onShowMems()">Memes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </section>
+    </header>
+    <div class="welcome flex column">
+        <p> welcome</p>
+        <p> To</p>
+        <p> Meme it</p>
+        <button onclick="start()"> start</button>
+    </div>
+    <section class="Meme-Editor  ">
+        <div class="canvas-container ">
+        <canvas id="my-canvas" ></canvas>
+    </div>
+    <div class="editor-actions  ">
+        <div class="box text-line-1"><input type="text" maxlength="30" onkeyup="addText(this)"  placeholder="text goes here"></div>
+        <!-- <div class="box text-line-2"><input type="text" maxlength="30" onkeyup="addText(this,1)" onclick="drawFrame()" placeholder="text goes here"></div> -->
+        <div class="box move-up"><button  class="fas fa-arrow-up" onclick="onMoveUp()"></button></div>
+        <div class="box move-down"><button  class="fas  fa-arrow-down" onclick="onMoveDown()"></button></div>
+        <div class="box switch"><button class="fas fa-exchange" onclick="switchBetweenLines(0,1)">🠗🠕</button></div>
+        <div class="box add-line" ><button onclick="onAddNewLine()" class="fas fa-plus"></button></div>
+        <div class="box delete"><button class="fas fa-trash-alt" onclick="onDeleteLine()"></button></div>
+        <div class="box size-up"><button onclick=" onIncreaseFont()">A+</button></div>
+        <div class="box size-down"><button onclick=" onDecreaseFont()">A-</button></div>
+        <div class="box left-area"><button class="fas fa-align-left" onclick="onAlign('left',40)"></button></div>
+        <div class="box center-area"><button class="fas fa-align-center" onclick="onAlign('center',250)"></button></div>
+        <div class="box right-area"><button class="fas fa-align-right"  onclick="onAlign('right',440)"></button></div>
+        <div class="box font"><select name="font" onclick="onChangeFont()" id="font" placeholder="text goes here" ></select></div>
+        <div class="box size"><input class="fas fa-pallette stroke-color" type="color" onclick="onChooseStrokeColor()" ></div>
+        <div class="box color"><input type="color" onclick="onChooseColor()" class="text-color"></div>
+        <div class="stickers">stickers</div>
+        <div class="box share"><a class="fas fa-share-alt" href="#" ></a></div>
+        <div class="box download"><a href="#" class="fas fa-download" onclick="onDownload(this)" download="" ></a></div>
+    </div>
+    </section>
+    <section class="actions  container">
+        <input type="search" class="search" onkeyup="onTypeSearch()" placeholder="SEARCH">
+        <ul class="top-key clean-list flex wrap align-baseline ">
+    
+        </ul>
+    </section>
+
+    <section class="gallery  wrap space-evenly container"></section>
+   
+
+    <footer>
+    </footer>
+
+    <script src="js/canvas-service.js"></script>
+    <script src="js/meme-util-controller.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
+
+</body>
+
+</html>
