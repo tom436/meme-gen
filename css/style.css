@@ -139,6 +139,7 @@ a {
 
 .Meme-Editor{
     display: none;
+    justify-content: space-evenly;
 }
 
 .editor-actions{
