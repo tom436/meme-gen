@@ -414,7 +414,7 @@ a {
     }
     .photo{
         width: 20vw;
-        height: 20vh;
+        max-height: 20vh;
         margin: 2px;
         border: rgb(255, 255, 255) 3px solid;
         
