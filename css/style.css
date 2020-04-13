@@ -388,20 +388,7 @@ a {
     }
     
     .editor-actions{
-        display: grid;
-        background-color: #97dbf131;
-        border: rgb(255, 255, 255) 3px solid;
-        grid-template-areas: 
-        "text-line-1 text-line-1 text-line-1 text-line-1 text-line-1"
-        "move-up move-down switch add-line delete "
-        "size-up size-down left-area center-area right-area "
-        "font font font size color"
-        "stickers stickers stickers stickers stickers "
-        "share share . download download"
-        ;
-        
-        grid-template-columns:  repeat(5,1fr) ;
-        grid-template-rows:  repeat(6,1fr) ;
+ 
         width: 508px;
         height: 30rem;
         margin: 0 auto;
@@ -426,7 +413,7 @@ a {
         opacity: 1;
     }
     .photo{
-        width: 20%;
+        width: 150px;
         margin: 2px;
         border: rgb(255, 255, 255) 3px solid;
         
